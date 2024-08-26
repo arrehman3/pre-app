@@ -3,15 +3,16 @@ type Props={
     items : {
         name : string;
         quantity: string;
-    }
-}
+    }[];
+};
 
 const MenuItems = (props:Props) => {
   return (
-    <li>
-        <h2>{props.items.name}</h2>
-        <span>{props.items.quantity}</span>
-    </li>
+    <ul>
+        {props.items.map((item,index)=>(
+            <li key={index}>{item.name}:{item.quantity}</li>
+        ))}
+    </ul>
   )
 }
 
