@@ -1,6 +1,8 @@
 
 import './App.css'
-import WelcomeMessage from './components/WelcomeMessage'
+import AutoCounter from './components/AutoCounter'
+
+import PostPage from './PostPage'
 
 
 
@@ -12,8 +14,8 @@ function App() {
     <>
       <h1 className='mb-4'>Hello World</h1>
       <p>Abdur Rehman</p>
-     <WelcomeMessage isLoggedIn={true} user={{name:"Abdur Rehman",type:'moderator'
-     }}/>
+      <AutoCounter/>
+      <PostPage/>
       
     </>
   )
