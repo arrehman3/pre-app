@@ -1,6 +1,7 @@
 
 import './App.css'
-import LoginForm from './components/LoginForm'
+import WelcomeMessage from './components/WelcomeMessage'
+
 
 
 
@@ -11,7 +12,8 @@ function App() {
     <>
       <h1 className='mb-4'>Hello World</h1>
       <p>Abdur Rehman</p>
-      <LoginForm/>
+     <WelcomeMessage isLoggedIn={true} user={{name:"Abdur Rehman",type:'moderator'
+     }}/>
       
     </>
   )
