@@ -1,19 +1,27 @@
 
+import { useEffect, useState } from 'react'
 import './App.css'
-import PostPage from './PostPage'
+import Todos from './components/Todos'
+import { getTodos } from './api/todos/todos-api'
+import { Todo } from './types'
+
 
 
 
 
 function App() {
-  
+  const [todos,setTodos]=useState<Todo[]>([]);
+  useEffect(()=>{
+    getTodos().then((todo)=>{
+      setTodos(todo);
+    })
+  },[])
 
   return (
-    <>
-      <h1 className='mb-4'>Hello World</h1>
-      <p>Abdur Rehman</p>
+    <> 
       
-      <PostPage/>
+      
+      <Todos todoArray={todos}/>
       
     </>
   )
