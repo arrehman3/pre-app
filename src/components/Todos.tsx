@@ -14,6 +14,11 @@ const Todos:FC<TodosProps> = ({todoArray}) => {
                 return <TodoItem item={item} key={item.id}/>
             })
         }
+        {
+            todoArray.map((item)=>{
+                return <TodoItem item={item} key={item.id}/>
+            })
+        }
     </ul>
   )
 }
